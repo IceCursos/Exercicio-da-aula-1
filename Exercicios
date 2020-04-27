@@ -1,0 +1,54 @@
+##### DESAFIO 1
+altura = input('Qual sua altura?')
+x = ((72.7 * float(altura)) - 58)
+print('Seu peso ideal é {: .2f}' .format(x))
+
+
+##### DESAFIO 2
+
+periodo = input('Digite a sigla do périodo que estuda:\nM - matutino\nV - vespertino\nN - noturno\nSigla: ')
+
+if periodo.upper() == 'M':
+    print('Bom dia')
+elif periodo.upper() == 'V':
+    print('Boa tarde')
+elif periodo.upper() =='N':
+    print('Boa noite')
+else:
+    print('Desculpe ... Tecla a sigla do período!')
+
+
+
+##### DESAFIO 3
+numero = int(input('Qual o número deseja recebre a sequência fibonacci?'))
+
+contador = 0
+n = 0
+
+for a in range(0,int(numero)):
+
+    if n == 0:
+       anterior = 0
+       n = n +1
+       atual = n
+       print(n)
+
+    elif n == 1:
+
+        anterior = atual
+        n = n + anterior
+
+    else:
+        n = anterior + atual
+        anterior = atual
+        atual = n
+        print(n)
+ 
+ ##### DESAFIO DE FUNÇÔES
+
+numero = int(input('Digite um número interio qualquer: '))
+
+def inverter(n):
+    return str(n)[::-1]
+
+print('O número {n1} invertido fica {n2} ' .format(n1=numero,n2=inverter(numero)))
